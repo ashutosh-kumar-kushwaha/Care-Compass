@@ -23,6 +23,7 @@ class MedicineAdapter: ListAdapter<Medicine, MedicineAdapter.MedicineViewHolder>
         fun bind(medicine: Medicine) {
             val text = "${medicine.name} - ${medicine.frequency}"
             binding.checkbox.text = text
+            binding.checkbox.isEnabled = false
         }
     }
 

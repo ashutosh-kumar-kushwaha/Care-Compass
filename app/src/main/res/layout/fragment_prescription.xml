@@ -117,7 +117,7 @@
                 <Spinner
                     android:id="@+id/dosesSpinner"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/dp_26"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_8"
                     android:layout_marginStart="@dimen/dp_24"
                     android:layout_marginEnd="@dimen/dp_24"
@@ -134,7 +134,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/dosesSpinner"
-                    android:layout_marginTop="@dimen/dp_8"
                     android:layout_marginStart="@dimen/dp_24"
                     android:layout_marginEnd="@dimen/dp_24" />
 
@@ -143,13 +142,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_24"
-                    android:layout_marginEnd="@dimen/dp_24"
                     android:layout_marginTop="@dimen/dp_64"
-                    android:layout_marginBottom="@dimen/dp_16"
-                    tools:listitem="@layout/medicine_item"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/submitBtn"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/submitBtn"
+                    tools:listitem="@layout/medicine_item" />
 
                 <Button
                     android:id="@+id/submitBtn"
