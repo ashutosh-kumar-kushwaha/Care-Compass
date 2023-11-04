@@ -10,25 +10,26 @@
 <!--        android:name="me.ashutoshkk.carecompass.home.HomeFragment"-->
 <!--        android:label="fragment_home"-->
 <!--        tools:layout="@layout/fragment_home" />-->
+    <fragment
+        android:id="@+id/consultationFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.consultation.ConsultationFragment"
+        android:label="fragment_consulation"
+        tools:layout="@layout/fragment_consulation" >
+        <action
+            android:id="@+id/action_consultationFragment_to_selfDiagnosisFragment"
+            app:destination="@id/selfDiagnosisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selfDiagnosisFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.selfDiagnosis.SelfDiagnosisFragment"
+        android:label="SelfDiagnosisFragment" >
+        <action
+            android:id="@+id/action_selfDiagnosisFragment_to_predictionFragment"
+            app:destination="@id/predictionFragment" />
+    </fragment>
 <!--    <fragment-->
-<!--        android:id="@+id/consultationFragment"-->
-<!--        android:name="me.ashutoshkk.carecompass.ui.consultation.ConsultationFragment"-->
-<!--        android:label="fragment_consulation"-->
-<!--        tools:layout="@layout/fragment_consulation" >-->
-<!--        <action-->
-<!--            android:id="@+id/action_consultationFragment_to_selfDiagnosisFragment"-->
-<!--            app:destination="@id/selfDiagnosisFragment" />-->
-<!--    </fragment>-->
-<!--    <fragment-->
-<!--        android:id="@+id/selfDiagnosisFragment"-->
-<!--        android:name="me.ashutoshkk.carecompass.ui.selfDiagnosis.SelfDiagnosisFragment"-->
-<!--        android:label="SelfDiagnosisFragment" >-->
-<!--        <action-->
-<!--            android:id="@+id/action_selfDiagnosisFragment_to_predictionFragment"-->
-<!--            app:destination="@id/predictionFragment" />-->
-<!--    </fragment><fragment-->
 <!--        android:id="@+id/accountFragment"-->
-<!--        android:name="me.ashutoshkk.carecompass.ui.selfDiagnosis.SelfDiagnosisFragment"-->
+<!--        android:name="me.ashutoshkk.carecompass.presentation.fragments.selfDiagnosis.SelfDiagnosisFragment"-->
 <!--        android:label="SelfDiagnosisFragment" />-->
 <!--    <fragment-->
 <!--        android:id="@+id/recordFragment"-->
@@ -38,11 +39,11 @@
 <!--            android:id="@+id/action_recordFragment_to_addRecordFragment"-->
 <!--            app:destination="@id/addRecordFragment" />-->
 <!--    </fragment>-->
-<!--    <fragment-->
-<!--        android:id="@+id/predictionFragment"-->
-<!--        android:name="me.ashutoshkk.carecompass.ui.prediction.PredictionFragment"-->
-<!--        android:label="fragment_prediction"-->
-<!--        tools:layout="@layout/fragment_prediction" />-->
+    <fragment
+        android:id="@+id/predictionFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.prediction.PredictionFragment"
+        android:label="fragment_prediction"
+        tools:layout="@layout/fragment_prediction" />
 <!--    <fragment-->
 <!--        android:id="@+id/addRecordFragment"-->
 <!--        android:name="me.ashutoshkk.carecompass.ui.addRecord.AddRecordFragment"-->

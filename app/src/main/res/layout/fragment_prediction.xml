@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="me.ashutoshkk.carecompass.presentation.viewModels.PredictionViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.fragments.prediction.PredictionFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/patientSymptomTxtVw"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Patient’s Symptoms"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:textSize="@dimen/sp_16"-->
+<!--                    android:letterSpacing="0.05"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:layout_marginStart="@dimen/dp_24"-->
+<!--                    android:layout_marginEnd="@dimen/dp_24"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/symptomsRecyclerView"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/dp_24"-->
+<!--                    android:layout_marginEnd="@dimen/dp_24"-->
+<!--                    android:layout_marginTop="@dimen/dp_12"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/patientSymptomTxtVw" />-->
+
+                <TextView
+                    android:id="@+id/diseasePredictedTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Disease Predicted"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color6"
+                    android:letterSpacing="0.05"
+                    android:textFontWeight="600"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/diseaseTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/diseasePredictedTxtVw" />
+
+                <TextView
+                    android:id="@+id/descriptionHeadingTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color6"
+                    android:letterSpacing="0.05"
+                    android:textFontWeight="600"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/diseaseTxtVw" />
+
+                <TextView
+                    android:id="@+id/descriptionTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionHeadingTxtVw" />
+
+                <TextView
+                    android:id="@+id/precautionTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Precautions"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color6"
+                    android:letterSpacing="0.05"
+                    android:textFontWeight="600"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionTxtVw" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/precautionRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/precautionTxtVw" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

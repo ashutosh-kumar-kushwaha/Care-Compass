@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:text="Joint Pain"
+        android:fontFamily="@font/montserrat"
+        android:button="@null"
+        android:drawableStart="@drawable/checkbox"
+        android:paddingStart="@dimen/dp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:buttonTint="@color/checkbox_text_color"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/checkbox_text_color"
+        android:textFontWeight="600"
+        android:background="@drawable/checkbox_bg"
+        android:layout_marginBottom="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectProblemTxtVw" />
+</layout>

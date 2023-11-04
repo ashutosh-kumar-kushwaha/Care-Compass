@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.fragments.selfDiagnosis.SelfDiagnosisFragment"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/consultation_toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/selfDiagnosisTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Self Diagnosis"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color6"
+                    android:textFontWeight="600"
+                    android:letterSpacing="0.05"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/selectProblemTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Select problem or symptoms you’re facing"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/color4"
+                    android:textFontWeight="600"
+                    android:letterSpacing="0.05"
+                    android:layout_marginTop="@dimen/dp_8"
+                    app:layout_constraintTop_toBottomOf="@id/selfDiagnosisTxtVw"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:hint="Search for a Symptom"
+                    android:iconifiedByDefault="false"
+                    android:background="@drawable/searchview_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/selectProblemTxtVw"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/symptomsRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/searchView"/>
+                
+
+                
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nextBtn"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            app:cornerRadius="@dimen/dp_48"
+            android:background="@drawable/enter_btn"
+            app:backgroundTint="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_30"
+            />
+
+    </RelativeLayout>
+</layout>
