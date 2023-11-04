@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".doctor.ui.auth.login.LoginFragment">
+
+        <data>
+            <variable
+                name="viewModel"
+                type="me.ashutoshkk.carecompass.ui.auth.login.LoginViewModel" />
+        </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/shopItLogo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_65"
+                android:layout_marginEnd="@dimen/dp_65"
+                android:layout_marginTop="@dimen/dp_91"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/health_hive_with_text" />
+
+            <TextView
+                android:id="@+id/letsSignInTxtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_28"
+                android:fontFamily="@font/montserrat"
+                android:text="Let's Sign You In"
+                android:textColor="@color/color2"
+                android:textFontWeight="600"
+                android:textSize="@dimen/sp_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shopItLogo" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailETxt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_54"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_44"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:background="@drawable/textbox_background"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@={viewModel.emailLiveData}"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:textColor="#000000"
+                android:textCursorDrawable="@drawable/cursor_black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/letsSignInTxtVw" />
+
+            <TextView
+                android:id="@+id/emailTxtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:fontFamily="@font/montserrat"
+                android:text="Email"
+                android:textColor="@color/color2"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toTopOf="@+id/emailETxt"
+                app:layout_constraintStart_toStartOf="@+id/emailETxt" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_69"
+                android:layout_marginEnd="@dimen/dp_24"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailETxt"
+                app:passwordToggleDrawable="@drawable/show_hide_password"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/color3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordETxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_54"
+                android:background="@drawable/textbox_background"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:text="@={viewModel.passwordLiveData}"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingTop="0dp"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingBottom="0dp"
+                android:textColor="#000000"
+                android:textCursorDrawable="@drawable/cursor_black"
+                android:textSize="@dimen/sp_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/passwordTxtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:fontFamily="@font/montserrat"
+                android:text="Password"
+                android:textColor="@color/color2"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toTopOf="@+id/passwordLayout"
+                app:layout_constraintStart_toStartOf="@+id/passwordLayout" />
+
+            <TextView
+                android:id="@+id/forgotPasswordBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/montserrat"
+                android:text="Forgot Password?"
+                android:textColor="@color/color2"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="@+id/passwordLayout"
+                app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
+
+            <Button
+                android:id="@+id/continueBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_54"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/montserrat"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="@dimen/sp_16"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/forgotPasswordBtn" />
+
+            <TextView
+                android:id="@+id/signInWithTxtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_53"
+                android:fontFamily="@font/montserrat"
+                android:text="or sign in with"
+                android:textColor="#908B8B"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/continueBtn" />
+
+            <TextView
+                android:id="@+id/notAMemberTxtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:fontFamily="@font/montserrat"
+                android:text="Not a member?"
+                android:textColor="@color/color2"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/continueBtn"
+                app:layout_constraintTop_toBottomOf="@+id/continueBtn" />
+
+            <TextView
+                android:id="@+id/RegisterBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:fontFamily="@font/montserrat"
+                android:text="Register"
+                android:textColor="@color/color2"
+                android:textFontWeight="600"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@id/notAMemberTxtVw"
+                app:layout_constraintStart_toEndOf="@+id/notAMemberTxtVw"
+                app:layout_constraintTop_toTopOf="@+id/notAMemberTxtVw" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_2"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="#D9D9D9"
+                android:layout_marginStart="@dimen/dp_24"
+                app:layout_constraintBottom_toBottomOf="@+id/signInWithTxtVw"
+                app:layout_constraintEnd_toStartOf="@+id/signInWithTxtVw"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/signInWithTxtVw" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_2"
+                android:layout_marginStart="@dimen/dp_8"
+                android:background="#D9D9D9"
+                android:layout_marginEnd="@dimen/dp_24"
+                app:layout_constraintBottom_toBottomOf="@+id/signInWithTxtVw"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/signInWithTxtVw"
+                app:layout_constraintTop_toTopOf="@+id/signInWithTxtVw" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_54"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:background="@drawable/textbox_background"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signInWithTxtVw">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/googleBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_54"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Sign in with Google"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color3"
+                    android:textSize="@dimen/sp_14"
+                    app:icon="@drawable/ic_google"
+                    app:iconSize="@dimen/dp_24"
+                    app:iconTint="@null" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

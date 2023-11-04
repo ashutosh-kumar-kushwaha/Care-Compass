@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.auth.getStarted.GetStartedFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="me.ashutoshkk.carecompass.ui.auth.getStarted.GetStartedViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <include layout="@layout/toolbar"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/getStartedTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Get Started"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_30"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/signUpTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:fontFamily="@font/montserrat"
+                    android:text="SignUp to explore a large variety of products on your phone."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/getStartedTxtVw" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailETxt"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_54"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:background="@drawable/textbox_background"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:text="@={viewModel.emailLiveData}"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@drawable/cursor_black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signUpTxtVw" />
+
+                <TextView
+                    android:id="@+id/emailTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Email"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toTopOf="@+id/emailETxt"
+                    app:layout_constraintEnd_toEndOf="@id/emailETxt"
+                    app:layout_constraintStart_toStartOf="@+id/emailETxt" />
+
+                <Button
+                    android:id="@+id/continueBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_54"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Continue"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/sp_16"
+                    app:backgroundTint="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/emailETxt" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/signUpWithTxtVw"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/dp_54"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:text="or sign up with"-->
+<!--                    android:textColor="#908B8B"-->
+<!--                    android:textSize="@dimen/sp_15"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/continueBtn" />-->
+
+                <TextView
+                    android:id="@+id/alreadyAMemberTxtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Already a member?"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@+id/continueBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/continueBtn" />
+
+                <TextView
+                    android:id="@+id/loginBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Login"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@+id/alreadyAMemberTxtVw"
+                    app:layout_constraintTop_toTopOf="@+id/alreadyAMemberTxtVw" />
+
+<!--                <View-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="@dimen/dp_2"-->
+<!--                    android:layout_marginStart="@dimen/dp_24"-->
+<!--                    android:layout_marginEnd="@dimen/dp_8"-->
+<!--                    android:background="#D9D9D9"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/signUpWithTxtVw"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/signUpWithTxtVw"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/signUpWithTxtVw" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="@dimen/dp_2"-->
+<!--                    android:layout_marginStart="@dimen/dp_8"-->
+<!--                    android:layout_marginEnd="@dimen/dp_24"-->
+<!--                    android:background="#D9D9D9"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/signUpWithTxtVw"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/signUpWithTxtVw"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/signUpWithTxtVw" />-->
+
+<!--                &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:id="@+id/googleLL"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_height="@dimen/dp_54"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginStart="@dimen/dp_24"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginTop="@dimen/dp_24"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginEnd="@dimen/dp_24"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@+id/signUpWithTxtVw">&ndash;&gt;-->
+
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/googleBtn"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="@dimen/dp_54"-->
+<!--                    android:layout_marginStart="@dimen/dp_24"-->
+<!--                    android:layout_marginTop="@dimen/dp_24"-->
+<!--                    android:layout_marginEnd="@dimen/dp_24"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/textbox_background"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:text="Sign up with Google"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/sp_14"-->
+<!--                    app:backgroundTint="@null"-->
+<!--                    app:icon="@drawable/ic_google"-->
+<!--                    app:iconSize="@dimen/dp_24"-->
+<!--                    app:iconTint="@null"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/signUpWithTxtVw" />-->
+
+
+                <!--                </LinearLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="@dimen/dp_16"-->
+<!--                    android:layout_marginTop="@dimen/dp_16"-->
+<!--                    android:layout_marginBottom="@dimen/dp_24"-->
+<!--                    android:src="@drawable/shopit_black"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/googleBtn" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</layout>
