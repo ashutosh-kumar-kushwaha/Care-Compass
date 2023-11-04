@@ -58,7 +58,15 @@ class PrescriptionFragment : Fragment(), AdapterView.OnItemSelectedListener {
             submitMedicine()
         }
 
+        binding.addBtn.setOnClickListener {
+            setAlarms()
+        }
+
         return binding.root
+    }
+
+    private fun setAlarms() {
+
     }
 
     private fun submitMedicine(){
@@ -73,7 +81,6 @@ class PrescriptionFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        Log.d("Ashu", p2.toString())
         selectedDose = doses[p2]
     }
 

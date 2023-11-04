@@ -176,7 +176,7 @@
         </androidx.core.widget.NestedScrollView>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/nextBtn"
+            android:id="@+id/addBtn"
             android:layout_width="@dimen/dp_48"
             android:layout_height="@dimen/dp_48"
             app:cornerRadius="@dimen/dp_48"

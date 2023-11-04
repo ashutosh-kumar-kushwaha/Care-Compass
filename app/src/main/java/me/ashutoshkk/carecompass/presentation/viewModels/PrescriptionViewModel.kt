@@ -5,9 +5,7 @@ import androidx.lifecycle.ViewModel
 import me.ashutoshkk.carecompass.domain.model.Medicine
 
 class PrescriptionViewModel : ViewModel() {
-    val medicineName = MutableLiveData<String>("")
+    val medicineName = MutableLiveData("")
 
     val medicines = mutableListOf<Medicine>()
-
-
 }
