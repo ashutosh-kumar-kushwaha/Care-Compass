@@ -6,7 +6,7 @@ import me.ashutoshkk.carecompass.domain.model.LoginRequest
 import me.ashutoshkk.carecompass.domain.model.LoginResponse
 import me.ashutoshkk.carecompass.domain.model.SignUpRequest
 import me.ashutoshkk.carecompass.domain.model.VerifyOtpRequest
-import me.ashutoshkk.carecompass.models.*
+import me.ashutoshkk.carecompass.domain.model.*
 import retrofit2.Response
 import retrofit2.http.*
 
