@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="me.ashutoshkk.carecompass.ui.auth.login.LoginFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/getStartedFragment"
-        android:name="me.ashutoshkk.carecompass.ui.auth.getStarted.GetStartedFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.getStarted.GetStartedFragment"
         android:label="fragment_get_started"
         tools:layout="@layout/fragment_get_started" >
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="me.ashutoshkk.carecompass.ui.auth.forgotPassword.ForgotPasswordFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.forgotPassword.ForgotPasswordFragment"
         android:label="fragment_get_started"
         tools:layout="@layout/fragment_forgot_password" >
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordOtpVerificationFragment"
-        android:name="me.ashutoshkk.carecompass.ui.auth.forgotPasswordOtpVerification.ForgotPasswordOtpVerificationFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.forgotPasswordOtpVerification.ForgotPasswordOtpVerificationFragment"
         tools:layout="@layout/fragment_forgot_password_otp_verification"
         android:label="ForgotPasswordOtpVerificationFragment">
         <action
@@ -51,12 +51,12 @@
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="me.ashutoshkk.carecompass.ui.auth.resetPassword.ResetPasswordFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.resetPassword.ResetPasswordFragment"
         tools:layout="@layout/fragment_reset_password"
         android:label="ResetPasswordFragment" />
     <fragment
         android:id="@+id/signUpOtpVerificationFragment"
-        android:name="me.ashutoshkk.carecompass.ui.auth.signUpOtpVerification.SignUpOtpVerificationFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.signUpOtpVerification.SignUpOtpVerificationFragment"
         tools:layout="@layout/fragment_sign_up_otp_verification"
         android:label="SignUpOtpVerificationFragment" >
         <action
@@ -65,11 +65,11 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="me.ashutoshkk.carecompass.ui.auth.signUp.SignUpFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.signUp.SignUpFragment"
         tools:layout="@layout/fragment_sign_up"
         android:label="SignUpFragment" />
     <fragment
         android:id="@+id/selfDiagnosisFragment"
-        android:name="me.ashutoshkk.carecompass.ui.selfDiagnosis.SelfDiagnosisFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.selfDiagnosis.SelfDiagnosisFragment"
         android:label="SelfDiagnosisFragment" />
 </navigation>

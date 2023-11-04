@@ -8,7 +8,7 @@
         <data>
             <variable
                 name="viewModel"
-                type="me.ashutoshkk.carecompass.ui.auth.login.LoginViewModel" />
+                type="me.ashutoshkk.carecompass.presentation.viewModels.LoginViewModel" />
         </data>
 
     <androidx.core.widget.NestedScrollView

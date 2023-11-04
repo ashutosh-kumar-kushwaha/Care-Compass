@@ -1,13 +1,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.auth.signUp.SignUpFragment">
+    tools:context=".presentation.fragments.signUp.SignUpFragment">
 
     <data>
 
         <variable
             name="viewModel"
-            type="me.ashutoshkk.carecompass.ui.auth.signUp.SignUpViewModel" />
+            type="me.ashutoshkk.carecompass.presentation.viewModels.SignUpViewModel" />
     </data>
 
     <LinearLayout

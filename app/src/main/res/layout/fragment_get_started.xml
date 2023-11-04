@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.auth.getStarted.GetStartedFragment">
+    tools:context=".presentation.fragments.getStarted.GetStartedFragment">
 
     <data>
 
         <variable
             name="viewModel"
-            type="me.ashutoshkk.carecompass.ui.auth.getStarted.GetStartedViewModel" />
+            type="me.ashutoshkk.carecompass.presentation.viewModels.GetStartedViewModel" />
     </data>
 
 

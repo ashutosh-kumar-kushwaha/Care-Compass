@@ -14,7 +14,7 @@
         android:theme="@style/Theme.CareCompass"
         tools:targetApi="31">
         <activity
-            android:name="me.ashutoshkk.carecompass.ui.SplashActivity"
+            android:name="me.ashutoshkk.carecompass.presentation.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="me.ashutoshkk.carecompass.ui.auth.AuthenticationActivity"
+            android:name="me.ashutoshkk.carecompass.presentation.activities.AuthenticationActivity"
             android:exported="false">
         </activity>
         <activity
-            android:name="me.ashutoshkk.carecompass.ui.MainActivity"
+            android:name="me.ashutoshkk.carecompass.presentation.activities.MainActivity"
             android:exported="false"/>
     </application>
 

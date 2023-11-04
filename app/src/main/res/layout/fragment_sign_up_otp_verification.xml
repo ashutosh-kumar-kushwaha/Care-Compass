@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="ui.auth.signUpOtpVerification.SignUpOtpVerificationFragment">
+    tools:context="presentation.fragments.signUpOtpVerification.SignUpOtpVerificationFragment">
 
         <data>
             <variable
                 name="viewModel"
-                type="me.ashutoshkk.carecompass.ui.auth.signUpOtpVerification.SignUpOtpVerificationViewModel" />
+                type="me.ashutoshkk.carecompass.presentation.viewModels.SignUpOtpVerificationViewModel" />
         </data>
 
     <androidx.core.widget.NestedScrollView
