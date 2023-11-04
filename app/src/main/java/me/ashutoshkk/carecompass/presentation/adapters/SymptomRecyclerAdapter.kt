@@ -5,11 +5,10 @@ import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
-import me.ashutoshkk.carecompass.CheckboxClickListener
 import me.ashutoshkk.carecompass.databinding.SymptomItemBinding
 import me.ashutoshkk.carecompass.domain.model.Symptom
 
-class SymptomRecyclerAdapter(val symptomList: List<Symptom>, private val checkboxClickListener: CheckboxClickListener) : RecyclerView.Adapter<SymptomRecyclerAdapter.ViewHolder>(),
+class SymptomRecyclerAdapter(val symptomList: List<Symptom>, private val clickListener: SymptomClickListener) : RecyclerView.Adapter<SymptomRecyclerAdapter.ViewHolder>(),
     Filterable {
 
     private var filteredList = symptomList
@@ -21,7 +20,7 @@ class SymptomRecyclerAdapter(val symptomList: List<Symptom>, private val checkbo
             binding.checkbox.isChecked = symptom.isPicked
 
             binding.checkbox.setOnClickListener {
-                checkboxClickListener.onClick(!symptom.isPicked, symptom.id-1)
+                clickListener.onClick(!symptom.isPicked, symptom.id-1)
             }
         }
     }
@@ -62,5 +61,9 @@ class SymptomRecyclerAdapter(val symptomList: List<Symptom>, private val checkbo
                 notifyDataSetChanged()
             }
         }
+    }
+
+    interface SymptomClickListener {
+        fun onClick(isPicked: Boolean, index: Int)
     }
 }

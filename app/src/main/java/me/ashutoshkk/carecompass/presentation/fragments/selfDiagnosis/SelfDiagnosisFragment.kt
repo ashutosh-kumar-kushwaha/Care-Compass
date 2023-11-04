@@ -15,14 +15,13 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import me.ashutoshkk.carecompass.CheckboxClickListener
 import me.ashutoshkk.carecompass.R
 import me.ashutoshkk.carecompass.databinding.FragmentSelfDiagnosisBinding
 import me.ashutoshkk.carecompass.domain.model.Symptom
 import me.ashutoshkk.carecompass.presentation.adapters.SymptomRecyclerAdapter
 import java.lang.reflect.Field
 
-class SelfDiagnosisFragment : Fragment(), CheckboxClickListener {
+class SelfDiagnosisFragment : Fragment(), SymptomRecyclerAdapter.SymptomClickListener {
 
     private var _binding: FragmentSelfDiagnosisBinding? = null
     private val binding: FragmentSelfDiagnosisBinding get() = _binding!!
