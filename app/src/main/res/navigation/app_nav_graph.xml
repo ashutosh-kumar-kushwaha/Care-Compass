@@ -44,6 +44,11 @@
         android:name="me.ashutoshkk.carecompass.presentation.fragments.prediction.PredictionFragment"
         android:label="fragment_prediction"
         tools:layout="@layout/fragment_prediction" />
+    <fragment
+        android:id="@+id/prescriptionFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.prescription.PrescriptionFragment"
+        android:label="fragment_prescription"
+        tools:layout="@layout/fragment_prescription" />
 <!--    <fragment-->
 <!--        android:id="@+id/addRecordFragment"-->
 <!--        android:name="me.ashutoshkk.carecompass.ui.addRecord.AddRecordFragment"-->
