@@ -157,9 +157,9 @@ interface RetrofitAPI {
 //
 //    //profile
 //
-//    @Headers("isAuthorized: true")
-//    @GET("api/profile/getProfile")
-//    suspend fun getProfile() : Response<Profile>
+    @Headers("isAuthorized: true")
+    @GET("api/profile/getProfile")
+    suspend fun getProfile() : Response<Profile>
 //
 //    @Headers("isAuthorized: true")
 //    @PUT("api/profile/updateProfile")
