@@ -14,55 +14,99 @@
             android:background="@color/white"
             tools:context="me.ashutoshkk.carecompass.ui.consultation.ConsultationFragment">
 
-            <include
-                android:id="@+id/toolbar"
-                layout="@layout/consultation_toolbar" />
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_care_compass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/welcomeTxtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:fontFamily="@font/montserrat"
+                android:letterSpacing="0.05"
+                android:text="Welcome!"
+                android:layout_marginTop="@dimen/dp_24"
+                android:textColor="@color/color6"
+                android:textFontWeight="600"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appLogo" />
+
+            <TextView
+                android:id="@+id/selectProblemTxtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:fontFamily="@font/montserrat"
+                android:letterSpacing="0.05"
+                android:text="Select problem or symptoms you’re facing or predict your mental health with our app!"
+                android:textColor="@color/color4"
+                android:textFontWeight="600"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcomeTxtVw" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:src="@drawable/doctor_patient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectProblemTxtVw" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/selfDiagnosisBtn"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/dp_267"
+                android:layout_height="@dimen/dp_54"
                 android:layout_marginStart="@dimen/dp_24"
-                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_80"
                 android:layout_marginEnd="@dimen/dp_24"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/button_background"
                 android:fontFamily="@font/montserrat"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:letterSpacing="0.05"
                 android:text="Self Diagnosis"
-                android:textColor="@color/color4"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
                 android:textFontWeight="600"
                 android:textSize="@dimen/sp_16"
-                app:cornerRadius="@dimen/dp_8"
+                android:letterSpacing="0.08"
+                app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbar"
-                app:strokeColor="@color/color5"
-                app:strokeWidth="@dimen/dp_1" />
+                app:layout_constraintTop_toBottomOf="@id/imageView" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/consultWithDoctorBtn"
+                android:id="@+id/mentalHealthPredictionBtn"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/dp_267"
+                android:layout_height="@dimen/dp_54"
                 android:layout_marginStart="@dimen/dp_24"
                 android:layout_marginTop="@dimen/dp_24"
                 android:layout_marginEnd="@dimen/dp_24"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/button_background"
                 android:fontFamily="@font/montserrat"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:letterSpacing="0.05"
-                android:text="Consult with a doctor"
-                android:textColor="@color/color4"
+                android:text="Mental Health Prediction"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
                 android:textFontWeight="600"
                 android:textSize="@dimen/sp_16"
-                app:cornerRadius="@dimen/dp_8"
+                android:letterSpacing="0.08"
+                app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/selfDiagnosisBtn"
-                app:strokeColor="@color/color5"
-                app:strokeWidth="@dimen/dp_1" />
+                app:layout_constraintTop_toBottomOf="@id/selfDiagnosisBtn"  />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 

@@ -27,9 +27,8 @@ class ConsultationFragment : Fragment() {
             findNavController().navigate(R.id.action_consultationFragment_to_selfDiagnosisFragment)
         }
 
-        val backBtn = binding.toolbar.findViewById<ImageView>(R.id.backBtn)
-        backBtn.setOnClickListener {
-            findNavController().navigateUp()
+        binding.mentalHealthPredictionBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_consultationFragment_to_quizFragment)
         }
 
 
