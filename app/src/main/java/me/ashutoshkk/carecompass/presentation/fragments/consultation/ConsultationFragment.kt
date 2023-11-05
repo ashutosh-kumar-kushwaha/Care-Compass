@@ -28,7 +28,7 @@ class ConsultationFragment : Fragment() {
         }
 
         binding.mentalHealthPredictionBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_selfDiagnosisFragment_to_quizFragment)
+            findNavController().navigate(R.id.action_consultationFragment_to_quizFragment)
         }
 
 
