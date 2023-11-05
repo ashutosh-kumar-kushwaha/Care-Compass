@@ -5,10 +5,14 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.util.Log
 import androidx.annotation.RequiresApi
 import me.ashutoshkk.carecompass.common.Constants
 import me.ashutoshkk.carecompass.domain.model.AlarmItem
+import java.time.LocalDateTime
 import java.time.ZoneId
+import java.time.ZoneOffset
+import java.time.ZonedDateTime
 
 class AndroidAlarmScheduler(
     private val context: Context
@@ -29,10 +33,12 @@ class AndroidAlarmScheduler(
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        alarmManager.setRepeating(
+        Log.d("Ashu", ZonedDateTime.now(ZoneId.systemDefault()).plusSeconds(2).toEpochSecond().toString())
+
+        alarmManager.setAndAllowWhileIdle(
             AlarmManager.RTC_WAKEUP,
-            item.time.atZone(ZoneId.systemDefault()).toEpochSecond() * 1000,
-            4000,
+            ZonedDateTime.now(ZoneId.systemDefault()).plusSeconds(2).toEpochSecond(),
+//            item.time.atZone(ZoneId.systemDefault()).toEpochSecond() * 1000,
             pendingIntent
         )
     }

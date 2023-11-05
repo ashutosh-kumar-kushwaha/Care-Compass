@@ -1,5 +1,6 @@
 package me.ashutoshkk.carecompass.presentation.fragments.prescription
 
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -8,12 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
 import me.ashutoshkk.carecompass.R
+import me.ashutoshkk.carecompass.alarm.AlarmScheduler
+import me.ashutoshkk.carecompass.alarm.AndroidAlarmScheduler
 import me.ashutoshkk.carecompass.databinding.FragmentPrescriptionBinding
+import me.ashutoshkk.carecompass.domain.model.AlarmItem
 import me.ashutoshkk.carecompass.domain.model.Medicine
 import me.ashutoshkk.carecompass.presentation.adapters.MedicineAdapter
 import me.ashutoshkk.carecompass.presentation.viewModels.PrescriptionViewModel
+import java.time.LocalDateTime
 
 class PrescriptionFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
@@ -29,6 +35,9 @@ class PrescriptionFragment : Fragment(), AdapterView.OnItemSelectedListener {
         MedicineAdapter()
     }
 
+    private lateinit var alarmScheduler: AndroidAlarmScheduler
+
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,6 +54,8 @@ class PrescriptionFragment : Fragment(), AdapterView.OnItemSelectedListener {
             R.layout.spinner_item,
             doses
         )
+
+        alarmScheduler = AndroidAlarmScheduler(requireContext())
 
         binding.dosesSpinner.onItemSelectedListener = this
 
@@ -65,8 +76,12 @@ class PrescriptionFragment : Fragment(), AdapterView.OnItemSelectedListener {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun setAlarms() {
-
+        viewModel.medicines.forEach { medicine ->
+            val alarmItem = AlarmItem(medicine.name, LocalDateTime.now().plusSeconds(5))
+            alarmScheduler.schedule(alarmItem)
+        }
     }
 
     private fun submitMedicine(){
