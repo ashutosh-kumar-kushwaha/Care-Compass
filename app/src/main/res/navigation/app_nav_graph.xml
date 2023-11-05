@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_selfDiagnosisFragment_to_predictionFragment"
             app:destination="@id/predictionFragment" />
+        <action
+            android:id="@+id/action_selfDiagnosisFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
     </fragment>
 <!--    <fragment-->
 <!--        android:id="@+id/accountFragment"-->
@@ -44,6 +47,11 @@
         android:name="me.ashutoshkk.carecompass.presentation.fragments.prediction.PredictionFragment"
         android:label="fragment_prediction"
         tools:layout="@layout/fragment_prediction" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
 <!--    <fragment-->
 <!--        android:id="@+id/addRecordFragment"-->
 <!--        android:name="me.ashutoshkk.carecompass.ui.addRecord.AddRecordFragment"-->
