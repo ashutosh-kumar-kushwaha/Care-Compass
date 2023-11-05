@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/documentImgVw"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/ic_document"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/clinicNameTxtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/black"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/documentImgVw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/locationImgVw"
+            android:layout_width="@dimen/dp_12"
+            android:layout_height="@dimen/dp_12"
+            android:src="@drawable/ic_location"
+            android:layout_marginTop="@dimen/dp_12"
+            app:layout_constraintStart_toStartOf="@id/clinicNameTxtVw"
+            app:layout_constraintTop_toBottomOf="@id/clinicNameTxtVw" />
+
+        <TextView
+            android:id="@+id/locationTxtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color4"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/locationImgVw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clinicNameTxtVw" />
+
+        <TextView
+            android:id="@+id/fromHeadingTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:text="From"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color4"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/documentImgVw"
+            app:layout_constraintTop_toBottomOf="@id/locationTxtVw" />
+
+        <TextView
+            android:id="@+id/fromTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/black"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/fromHeadingTxtVw"
+            app:layout_constraintTop_toBottomOf="@id/locationTxtVw" />
+
+        <TextView
+            android:id="@+id/toHeadingTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:text="To"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color4"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/fromTxtVw"
+            app:layout_constraintTop_toBottomOf="@id/locationTxtVw" />
+
+        <TextView
+            android:id="@+id/toTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/black"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/toHeadingTxtVw"
+            app:layout_constraintTop_toBottomOf="@id/locationTxtVw" />
+
+        <TextView
+            android:id="@+id/symptomsTxtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="Symptoms"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color6"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/documentImgVw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toTxtVw" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/symptomsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            app:layout_constraintStart_toEndOf="@id/documentImgVw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/symptomsTxtVw" />
+
+        <TextView
+            android:id="@+id/prescriptionTxtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="Prescriptions"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color6"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/documentImgVw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/symptomsRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/prescriptionsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            app:layout_constraintStart_toEndOf="@id/documentImgVw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prescriptionTxtVw" />
+
+        <TextView
+            android:id="@+id/descriptionHeadingTxtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="Description"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color6"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/documentImgVw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prescriptionsRecyclerView" />
+
+        <TextView
+            android:id="@+id/descriptionTxtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color4"
+            android:letterSpacing="0.05"
+            app:layout_constraintStart_toEndOf="@id/documentImgVw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionHeadingTxtVw"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dp_12" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

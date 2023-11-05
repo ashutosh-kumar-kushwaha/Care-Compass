@@ -34,14 +34,14 @@
 <!--        android:id="@+id/accountFragment"-->
 <!--        android:name="me.ashutoshkk.carecompass.presentation.fragments.selfDiagnosis.SelfDiagnosisFragment"-->
 <!--        android:label="SelfDiagnosisFragment" />-->
-<!--    <fragment-->
-<!--        android:id="@+id/recordFragment"-->
-<!--        android:name="me.ashutoshkk.carecompass.ui.record.RecordsFragment"-->
-<!--        android:label="RecordFragment" >-->
-<!--        <action-->
-<!--            android:id="@+id/action_recordFragment_to_addRecordFragment"-->
-<!--            app:destination="@id/addRecordFragment" />-->
-<!--    </fragment>-->
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.record.RecordsFragment"
+        android:label="RecordFragment" >
+        <action
+            android:id="@+id/action_recordFragment_to_addRecordFragment"
+            app:destination="@id/addRecordFragment" />
+    </fragment>
     <fragment
         android:id="@+id/predictionFragment"
         android:name="me.ashutoshkk.carecompass.presentation.fragments.prediction.PredictionFragment"
@@ -62,8 +62,8 @@
         android:name="me.ashutoshkk.carecompass.presentation.fragments.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
-<!--    <fragment-->
-<!--        android:id="@+id/addRecordFragment"-->
-<!--        android:name="me.ashutoshkk.carecompass.ui.addRecord.AddRecordFragment"-->
-<!--        android:label="AddRecordFragment" />-->
+    <fragment
+        android:id="@+id/addRecordFragment"
+        android:name="me.ashutoshkk.carecompass.ui.addRecord.AddRecordFragment"
+        android:label="AddRecordFragment" />
 </navigation>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="me.ashutoshkk.carecompass.presentation.viewModels.AddRecordViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.addRecord.AddRecordFragment"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_24"
+                android:padding="@dimen/dp_5"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Record"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black"
+                android:letterSpacing="0.05"
+                android:layout_marginStart="@dimen/dp_28"
+                android:textFontWeight="600" />
+
+        </Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/clinicNameTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_12"
+                    android:text="Clinic Name"
+                    android:textColor="@color/color4"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/clinicNameETxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:letterSpacing="0.05"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    android:text="@={viewModel.clinicName}"
+                    android:padding="0dp"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clinicNameTxtVw" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_width="0dp"
+                    android:background="@color/color4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clinicNameETxt"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+                <TextView
+                    android:id="@+id/addressTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_12"
+                    android:text="Address"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line1" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addressETxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:letterSpacing="0.05"
+                    android:text="@={viewModel.address}"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    android:padding="0dp"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addressTxtVw" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_width="0dp"
+                    android:background="@color/color4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addressETxt"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+
+                <TextView
+                    android:id="@+id/fromTxtVw"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_12"
+                    android:text="From"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line2" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fromETxt"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="0.05"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.from}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fromTxtVw"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_width="@dimen/dp_100"
+                    android:background="@color/color4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fromETxt"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+
+                <TextView
+                    android:id="@+id/toTxtVw"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_12"
+                    android:text="To"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toEndOf="@id/fromTxtVw"
+                    app:layout_constraintTop_toBottomOf="@id/line2" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/toETxt"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:letterSpacing="0.05"
+                    android:text="@={viewModel.to}"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    android:padding="0dp"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toEndOf="@id/fromETxt"
+                    app:layout_constraintTop_toBottomOf="@id/toTxtVw" />
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_width="@dimen/dp_100"
+                    android:background="@color/color4"
+                    app:layout_constraintStart_toEndOf="@id/fromETxt"
+                    app:layout_constraintTop_toBottomOf="@id/toETxt"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+
+                <TextView
+                    android:id="@+id/symptomsTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_12"
+                    android:text="Symptoms (Separated with commas)"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line4" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/symptomsETxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:letterSpacing="0.05"
+                    android:text="@={viewModel.symptoms}"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    android:padding="0dp"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/symptomsTxtVw" />
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_width="0dp"
+                    android:background="@color/color4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/symptomsETxt"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/uploadBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_12"
+                    android:text="Upload"
+                    android:backgroundTint="@color/white"
+                    app:strokeWidth="@dimen/dp_1"
+                    app:strokeColor="@color/color4"
+                    app:cornerRadius="0dp"
+                    android:textFontWeight="600"
+                    android:insetBottom="0dp"
+                    android:insetTop="0dp"
+                    app:icon="@drawable/ic_upload"
+                    app:iconSize="@dimen/dp_24"
+                    app:iconGravity="end"
+                    app:iconTint="@null"
+                    android:textColor="@color/color7"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line5" />
+
+                <TextView
+                    android:id="@+id/descriptionHeadingTxtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/sp_12"
+                    android:text="Description"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/uploadBtn" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionETxt"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_136"
+                    android:fontFamily="@font/poppins"
+                    android:letterSpacing="0.05"
+                    android:text="@={viewModel.description}"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:background="@drawable/txtbx_bg"
+                    android:textSize="@dimen/sp_12"
+                    android:padding="0dp"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionHeadingTxtVw" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imagesRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionETxt"/>
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/submitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:text="UPLOAD"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imagesRecyclerView"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>
