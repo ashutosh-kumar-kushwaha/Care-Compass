@@ -1,13 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <data>
-
-    </data>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@drawable/question_bg">
 
+        <ImageView
+            android:id="@+id/questionImgVw"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/ic_question"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/QuestionNoTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/color1"
+            android:textFontWeight="500"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/questionImgVw"
+            app:layout_constraintStart_toEndOf="@id/questionImgVw"
+            app:layout_constraintTop_toTopOf="@id/questionImgVw"
+            tools:text="Question 1" />
+
+        <TextView
+            android:id="@+id/QuestionTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/QuestionNoTxtVw"
+            app:layout_constraintTop_toBottomOf="@id/questionImgVw"
+            tools:text="How many friends do you have?" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/QuestionTxtVw"
+            app:layout_constraintTop_toBottomOf="@id/QuestionTxtVw"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RadioButton
+                android:id="@+id/optionARBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/color1"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                tools:text="How many friends do you have?" />
+
+            <RadioButton
+                android:id="@+id/optionBRBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/color1"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                tools:text="How many friends do you have?" />
+
+            <RadioButton
+                android:id="@+id/optionCRBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/color1"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                tools:text="How many friends do you have?" />
+
+            <RadioButton
+                android:id="@+id/optionDRBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/color1"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                tools:text="How many friends do you have?" />
+
+        </RadioGroup>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
