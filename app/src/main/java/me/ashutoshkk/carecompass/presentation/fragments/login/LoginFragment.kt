@@ -89,9 +89,9 @@ class LoginFragment : Fragment() {
             Constants.clientId).build()
         gsc = GoogleSignIn.getClient(requireActivity(), gso)
 
-        binding.googleBtn.setOnClickListener {
-            signInWithGoogle()
-        }
+//        binding.googleBtn.setOnClickListener {
+//            signInWithGoogle()
+//        }
 
         binding.forgotPasswordBtn.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
