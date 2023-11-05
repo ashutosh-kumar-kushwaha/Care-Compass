@@ -48,6 +48,11 @@
         android:label="fragment_prediction"
         tools:layout="@layout/fragment_prediction" />
     <fragment
+        android:id="@+id/prescriptionFragment"
+        android:name="me.ashutoshkk.carecompass.presentation.fragments.prescription.PrescriptionFragment"
+        android:label="fragment_prescription"
+        tools:layout="@layout/fragment_prescription" />
+    <fragment
         android:id="@+id/quizFragment"
         android:name="me.ashutoshkk.carecompass.presentation.fragments.quiz.QuizFragment"
         android:label="fragment_quiz"
