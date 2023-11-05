@@ -27,8 +27,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import me.ashutoshkk.carecompass.common.Resource
+import me.ashutoshkk.carecompass.data.datastore.DataStoreManager
 import me.ashutoshkk.carecompass.databinding.FragmentProfileBinding
 import me.ashutoshkk.carecompass.databinding.ProgressBarBinding
+import me.ashutoshkk.carecompass.presentation.activities.AuthenticationActivity
 import me.ashutoshkk.carecompass.presentation.viewModels.ProfileViewModel
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -84,6 +86,10 @@ class ProfileFragment : Fragment() {
         progressBar.setContentView(progressBarBinding.root)
         progressBar.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         progressBar.setCanceledOnTouchOutside(false)
+
+        binding.logout.setOnClickListener{
+            logOut()
+        }
 
 //        val addressClickListener = object : AddressClickListener {
 //            override fun onAddressClick(addressId: Int) {
@@ -407,4 +413,14 @@ class ProfileFragment : Fragment() {
         _progressBarBinding = null
     }
 
+
+    private fun logOut(){
+        lifecycleScope.launch {
+            val dataStoreManager = DataStoreManager(requireContext())
+            dataStoreManager.deleteLogInInfo()
+        }
+        val intent = Intent(requireContext(), AuthenticationActivity::class.java)
+        startActivity(intent)
+        requireActivity().finish()
+    }
 }

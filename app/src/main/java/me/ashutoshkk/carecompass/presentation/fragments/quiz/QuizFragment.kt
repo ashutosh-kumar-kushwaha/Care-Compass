@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
+import androidx.lifecycle.findViewTreeViewModelStoreOwner
+import androidx.navigation.fragment.findNavController
 import me.ashutoshkk.carecompass.databinding.FragmentQuizBinding
 import me.ashutoshkk.carecompass.domain.model.Question
 import me.ashutoshkk.carecompass.presentation.adapters.QuestionsAdapter
@@ -36,9 +38,13 @@ class QuizFragment : Fragment(), QuestionsAdapter.QuestionClickListener {
 
 //        binding.questionsRecyclerView.adapter = questionsAdapter
 
-        binding.webView.loadUrl("www.google.com")
+        binding.webView.loadUrl("https://care-compass-quiz.vercel.app/")
         binding.webView.settings.javaScriptEnabled = true
         binding.webView.webViewClient = WebViewClient()
+
+        binding.backBtn.setOnClickListener{
+            findNavController().navigateUp()
+        }
 
         return binding.root
     }

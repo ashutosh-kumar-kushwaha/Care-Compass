@@ -8,12 +8,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import me.ashutoshkk.carecompass.databinding.FragmentPredictionBinding
 import me.ashutoshkk.carecompass.databinding.ProgressBarBinding
 import dagger.hilt.android.AndroidEntryPoint
+import me.ashutoshkk.carecompass.R
 import me.ashutoshkk.carecompass.common.Resource
 import me.ashutoshkk.carecompass.presentation.adapters.TextRecyclerView
 import me.ashutoshkk.carecompass.presentation.viewModels.PredictionViewModel
@@ -51,6 +54,12 @@ class PredictionFragment : Fragment() {
 //            binding.symptomsRecyclerView.adapter = TextRecyclerView(predictionViewModel.symptomsList)
 //            binding.symptomsRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         }
+
+        binding.toolbar.findViewById<ImageView>(R.id.backBtn).setOnClickListener{
+            findNavController().navigateUp()
+        }
+
+
 
         predictionViewModel.predict()
 

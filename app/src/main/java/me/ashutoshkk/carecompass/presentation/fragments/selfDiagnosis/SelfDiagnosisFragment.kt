@@ -226,6 +226,10 @@ class SelfDiagnosisFragment : Fragment(), SymptomRecyclerAdapter.SymptomClickLis
             findNavController().navigate(R.id.action_selfDiagnosisFragment_to_predictionFragment, bundle)
         }
 
+        binding.toolbar.findViewById<ImageView>(R.id.backBtn).setOnClickListener{
+            findNavController().navigateUp()
+        }
+
         return binding.root
     }
 

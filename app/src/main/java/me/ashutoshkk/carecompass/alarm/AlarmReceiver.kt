@@ -28,9 +28,9 @@ class AlarmReceiver: BroadcastReceiver() {
         val stopIntent = PendingIntent.getBroadcast(context, 0, Intent("STOP_ACTION"), PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
 
         val notification = NotificationCompat.Builder(context, "alarm_channel")
-            .setContentTitle("Alarm")
-            .setContentText("Your alarm is running")
-            .setSmallIcon(R.drawable.health_hive)
+            .setContentTitle("Medicine Time!")
+            .setContentText(message)
+            .setSmallIcon(R.drawable.care_compass)
             .setAutoCancel(true)
             .build()
 

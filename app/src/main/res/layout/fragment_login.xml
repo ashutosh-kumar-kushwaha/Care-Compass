@@ -25,21 +25,21 @@
                 android:id="@+id/shopItLogo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_65"
-                android:layout_marginEnd="@dimen/dp_65"
-                android:layout_marginTop="@dimen/dp_91"
+                android:layout_marginStart="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_35"
+                android:layout_marginTop="@dimen/dp_40"
                 android:adjustViewBounds="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/health_hive_with_text" />
+                app:srcCompat="@drawable/compass" />
 
             <TextView
                 android:id="@+id/letsSignInTxtVw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_24"
-                android:layout_marginTop="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_8"
                 android:fontFamily="@font/montserrat"
                 android:text="Let's Sign You In"
                 android:textColor="@color/color2"
@@ -137,6 +137,7 @@
                 android:layout_marginTop="@dimen/dp_8"
                 android:fontFamily="@font/montserrat"
                 android:text="Forgot Password?"
+                android:visibility="invisible"
                 android:textColor="@color/color2"
                 android:textSize="@dimen/sp_14"
                 app:layout_constraintEnd_toEndOf="@+id/passwordLayout"
@@ -161,18 +162,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/forgotPasswordBtn" />
 
-            <TextView
-                android:id="@+id/signInWithTxtVw"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_53"
-                android:fontFamily="@font/montserrat"
-                android:text="or sign in with"
-                android:textColor="#908B8B"
-                android:textSize="@dimen/sp_15"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/continueBtn" />
+<!--            <TextView-->
+<!--                android:id="@+id/signInWithTxtVw"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/dp_53"-->
+<!--                android:fontFamily="@font/montserrat"-->
+<!--                android:text="or sign in with"-->
+<!--                android:textColor="#908B8B"-->
+<!--                android:textSize="@dimen/sp_15"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/continueBtn" />-->
 
             <TextView
                 android:id="@+id/notAMemberTxtVw"
@@ -200,60 +201,60 @@
                 app:layout_constraintStart_toEndOf="@+id/notAMemberTxtVw"
                 app:layout_constraintTop_toTopOf="@+id/notAMemberTxtVw" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp_2"
-                android:layout_marginEnd="@dimen/dp_8"
-                android:background="#D9D9D9"
-                android:layout_marginStart="@dimen/dp_24"
-                app:layout_constraintBottom_toBottomOf="@+id/signInWithTxtVw"
-                app:layout_constraintEnd_toStartOf="@+id/signInWithTxtVw"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/signInWithTxtVw" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="@dimen/dp_2"-->
+<!--                android:layout_marginEnd="@dimen/dp_8"-->
+<!--                android:background="#D9D9D9"-->
+<!--                android:layout_marginStart="@dimen/dp_24"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/signInWithTxtVw"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/signInWithTxtVw"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/signInWithTxtVw" />-->
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp_2"
-                android:layout_marginStart="@dimen/dp_8"
-                android:background="#D9D9D9"
-                android:layout_marginEnd="@dimen/dp_24"
-                app:layout_constraintBottom_toBottomOf="@+id/signInWithTxtVw"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/signInWithTxtVw"
-                app:layout_constraintTop_toTopOf="@+id/signInWithTxtVw" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="@dimen/dp_2"-->
+<!--                android:layout_marginStart="@dimen/dp_8"-->
+<!--                android:background="#D9D9D9"-->
+<!--                android:layout_marginEnd="@dimen/dp_24"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/signInWithTxtVw"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/signInWithTxtVw"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/signInWithTxtVw" />-->
 
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp_54"
-                android:layout_marginStart="@dimen/dp_24"
-                android:layout_marginTop="@dimen/dp_24"
-                android:layout_marginEnd="@dimen/dp_24"
-                android:layout_marginBottom="@dimen/dp_24"
-                android:background="@drawable/textbox_background"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/signInWithTxtVw">
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="@dimen/dp_54"-->
+<!--                android:layout_marginStart="@dimen/dp_24"-->
+<!--                android:layout_marginTop="@dimen/dp_24"-->
+<!--                android:layout_marginEnd="@dimen/dp_24"-->
+<!--                android:layout_marginBottom="@dimen/dp_24"-->
+<!--                android:background="@drawable/textbox_background"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/signInWithTxtVw">-->
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/googleBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp_54"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/white"
-                    android:fontFamily="@font/montserrat"
-                    android:gravity="center"
-                    android:text="Sign in with Google"
-                    android:textAllCaps="false"
-                    android:textColor="@color/color3"
-                    android:textSize="@dimen/sp_14"
-                    app:icon="@drawable/ic_google"
-                    app:iconSize="@dimen/dp_24"
-                    app:iconTint="@null" />
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/googleBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="@dimen/dp_54"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:backgroundTint="@color/white"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Sign in with Google"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/color3"-->
+<!--                    android:textSize="@dimen/sp_14"-->
+<!--                    app:icon="@drawable/ic_google"-->
+<!--                    app:iconSize="@dimen/dp_24"-->
+<!--                    app:iconTint="@null" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

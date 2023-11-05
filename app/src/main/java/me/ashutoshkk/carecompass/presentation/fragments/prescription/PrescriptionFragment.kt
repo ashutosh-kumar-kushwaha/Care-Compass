@@ -11,6 +11,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import me.ashutoshkk.carecompass.R
 import me.ashutoshkk.carecompass.alarm.AlarmScheduler
 import me.ashutoshkk.carecompass.alarm.AndroidAlarmScheduler
@@ -66,11 +67,15 @@ class PrescriptionFragment : Fragment(), AdapterView.OnItemSelectedListener {
         binding.dosesSpinner.adapter = ad
 
         binding.submitBtn.setOnClickListener {
-            submitMedicine()
+            setAlarms()
+        }
+
+        binding.backBtn.setOnClickListener {
+            findNavController().navigateUp()
         }
 
         binding.addBtn.setOnClickListener {
-            setAlarms()
+            submitMedicine()
         }
 
         return binding.root
