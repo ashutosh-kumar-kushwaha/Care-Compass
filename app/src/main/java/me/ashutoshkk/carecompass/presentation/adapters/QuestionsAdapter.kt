@@ -9,7 +9,13 @@ import me.ashutoshkk.carecompass.domain.model.Question
 class QuestionsAdapter(private val questions: List<Question>): RecyclerView.Adapter<QuestionsAdapter.QuestionViewHolder>() {
     class QuestionViewHolder(private val binding: QuestionItemBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(question: Question){
-
+            val questionNo = "Question ${question.id}"
+            binding.questionNoTxtVw.text = questionNo
+            binding.questionTxtVw.text = question.question
+            binding.optionARBtn.text = question.optionA
+            binding.optionBRBtn.text = question.optionB
+            binding.optionCRBtn.text = question.optionC
+            binding.optionDRBtn.text = question.optionD
         }
     }
 
